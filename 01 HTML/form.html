@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Tag</title>
+  </head>
+  <body>
+    <h1>Student Registration Form</h1>
+    <br />
+
+    <form action="">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <br />
+        <label for="name">Name : </label>
+        <input id="name" type="text" placeholder="Type your name." />
+        <br /><br />
+        <label for="email">Email : </label>
+        <input id="email" type="text" placeholder="Type your email." />
+        <br /><br />
+        <label for="phone">Phone number : </label>
+        <input id="phone" type="text" placeholder="Type your phone number." />
+        <br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Address Details</legend>
+        <label for="address">Address line 1: </label>
+        <textarea
+          name=""
+          id="address"
+          placeholder="enter your address"
+        ></textarea>
+        <br /><br />
+        <label for="city">City : </label>
+        <select name="" id="city">
+          <option value="">Indore</option>
+          <option value="">Dhar</option>
+          <option value="">Bhopal</option>
+          <option value="">Jabalpur</option>
+          <option value="">Gwalior</option>
+        </select>
+        <br /><br />
+        <label for="country">Country : </label>
+        <select name="" id="country">
+          <option value="">India</option>
+          <option value="">Other</option>
+        </select>
+      </fieldset>
+
+      <label for="course">Select Course</label>
+      <select name="course" id="course">
+        <optgroup label="Frontend">
+          <option value="">HTML</option>
+          <option value="">CSS</option>
+          <option value="">JS</option>
+        </optgroup>
+        <optgroup label="Backend">
+          <option value="">Nodejs</option>
+          <option value="">Mongodb</option>
+        </optgroup>
+      </select>
+      <br /><br />
+
+      <label for="comments">Any comments : </label>
+      <textarea
+        name=""
+        id="comment"
+        placeholder="write your comment here..."
+      ></textarea>
+      <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <br /><br />
+    <details>
+      <summary>Facing Issues?</summary>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint rerum
+        earum sit?
+      </p>
+    </details>
+  </body>
+</html>
