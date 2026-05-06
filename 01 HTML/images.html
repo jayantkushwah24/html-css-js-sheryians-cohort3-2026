@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images</title>
+  </head>
+  <body>
+    <!-- Basic image — alt is mandatory -->
+    <img src="photo.jpg" alt="A developer coding at a desk" />
+
+    <!-- Decorative image — empty alt, screen reader skips it -->
+    <img src="divider-line.png" alt="" />
+
+    <!-- Responsive image — different sizes for different screens -->
+    <img
+      src="photo-800.jpg"
+      srcset="photo-400.jpg 400w, photo-800.jpg 800w, photo-1200.jpg 1200w"
+      sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
+      alt="Description"
+      width="800"
+      height="600"
+      loading="lazy"
+    />
+
+    <!-- Modern formats with fallback -->
+    <picture>
+      <source srcset="photo.avif" type="image/avif" />
+      <source srcset="photo.webp" type="image/webp" />
+      <img src="photo.jpg" alt="Description" width="800" height="600" />
+    </picture>
+
+    <!-- Figure with caption -->
+    <figure>
+      <img src="chart.png" alt="Bar chart showing monthly sales data" />
+      <figcaption>
+        Monthly sales for Q3 2025. Data from internal CRM.
+      </figcaption>
+    </figure>
+  </body>
+</html>

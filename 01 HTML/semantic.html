@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Tag</title>
+  </head>
+  <body>
+    <!-- Non-semantic — works visually but meaningless -->
+    <div class="header">
+      <div class="nav">
+        <div class="nav-item">Home</div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="article">...</div>
+    </div>
+    <div class="footer">...</div>
+
+    <!-- Semantic — same visual result, rich meaning -->
+    <header>
+      <nav>
+        <a href="/">Home</a>
+      </nav>
+    </header>
+    <main>
+      <article>...</article>
+    </main>
+    <footer>...</footer>
+
+    <p>
+      The word <strong>danger</strong> carries high importance. The word
+      <em>slowly</em> is being emphasized for tone. The abbreviation
+      <abbr title="HyperText Markup Language">HTML</abbr> is explained on hover.
+      This is a <mark>highlighted passage</mark> for reference. The price
+      dropped from <del>₹500</del> to <ins>₹350</ins>. The formula is
+      H<sub>2</sub>O and E=mc<sup>2</sup>. The error code was
+      <code>404 Not Found</code>. Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.
+      The output was <samp>Hello, World!</samp>. The variable is defined as
+      <var>x</var>. <q>To be or not to be</q> is a famous quote.
+      <cite>Hamlet</cite> was written by Shakespeare. This is
+      <small>fine print or legal text</small>. A word break opportunity:
+      super<wbr />cali<wbr />fragilistic
+      <time datetime="2025-01-15">January 15, 2025</time>
+    </p>
+  </body>
+</html>
