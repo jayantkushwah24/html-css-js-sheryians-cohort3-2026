@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* content box is default */
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: ghastly panic;
+  src: url(./Ghastly\ Panic.ttf);
+}
+
+@font-face {
+  font-family: lucy said ok;
+  src: url("./Lucy\ Said\ Ok\ Personal\ Use.ttf");
+}
+
+@font-face {
+    font-family: nothing;
+    src: url('./NType82-Regular.otf');
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 5px;
+}
+
+h1 {
+  font-size: 200px;
+  text-align: center;
+}
+
+.first {
+  background-color: red;
+  color: #000;
+  height: 50%;
+  border: 10px solid black;
+}
+
+#horror {
+  font-family: "ghastly panic";
+  font-weight: 700;
+}
+
+.second {
+  background-color: rgb(200, 81, 101);
+  color: white;
+  height: 50%;
+  border: 10px solid white;
+}
+
+#love {
+  font-family: "lucy said ok";
+  font-weight: 200;
+}
+
+.bridge {
+  background-image: url("https://images.unsplash.com/photo-1590083948603-b270aff24cc1?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+}
+p{
+    font-size: 80px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "nothing";
+    font-weight: 100;
+}
