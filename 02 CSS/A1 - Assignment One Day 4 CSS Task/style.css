@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: opensans;
+  src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+#whole-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 30px 150px;
+}
+
+#yellow-section {
+  height: 100%;
+  width: 60%;
+  background-color: #fbc50b;
+  border-radius: 20px 0 0 20px;
+  font-family: opensans;
+}
+
+#light-pink-section {
+  height: 100%;
+  width: 40%;
+  background-color: #fbe8b5;
+  border-radius: 0 20px 20px 0;
+}
+
+#pokemon-logo {
+  margin: 0px 50px;
+}
+
+.text-area {
+  margin: 10px 50px;
+}
+
+.first-line {
+  text-transform: uppercase;
+  font-size: small;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.heading-word {
+  font-size: 55px;
+}
+
+.paragraph {
+  font-size: medium;
+  font-weight: 400;
+  color: #4b3901;
+}
+
+.last-line {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.line {
+  margin-right: 20px;
+  position: relative;
+  bottom: 5px;
+}
+
+.pikachu {
+  position: absolute;
+  bottom: 100px;
+  right: 400px;
+}
+
+.menu {
+  position: relative;
+  left: 420px;
+  top: 30px;
+}
+
+.circle {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  position: relative;
+  top: 200px;
+  left: 440px;
+  margin: 15px;
+}
+#black-circle {
+  background-color: black;
+}
+#yellow-circle {
+  background-color: yellow;
+}
