@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.left-side {
+  height: 100%;
+  width: 50%;
+  background-color: white;
+  color: black;
+}
+.right-side {
+  height: 100%;
+  width: 50%;
+  background-color: #b93930;
+  color: white;
+}
+.nav-left {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+.logo h1 {
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 600;
+}
+#search-bar {
+  width: 20rem;
+  height: 2.8rem;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  border-style: none;
+  background-color: #e2e0e0;
+  font-weight: 100;
+}
+.search-icon{
+    position: relative;
+    left: 2.6rem;
+    top: 0.4rem;
+}
+main {
+  margin: 10px;
+}
+.vertical-word {
+  transform: rotate(270deg);
+  position: relative;
+  right: 16rem;
+  font-size: 60px;
+  font-family: serif;
+}
+.word-listing ul li {
+  font-size: 20px;
+  position: relative;
+  left: 16rem;
+}
+.insect {
+  position: absolute;
+  left: 36rem;
+  top: 6rem;
+}
+.nav-right ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  color: white;
+  font-size: large;
+  padding: 20px;
+  margin-top: 10px;
+}
+.nav-right ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.name {
+  position: relative;
+  left: 16rem;
+  top: 2rem;
+  font-size: 60px;
+  font-family: serif;
+}
+.information {
+  color: white;
+  position: relative;
+  left: 16rem;
+  top: 5rem;
+  display: flex;
+  flex-direction: row;
+  font-weight: 100;
+  font-size: 14px;
+}
+.length {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+.vertical-line {
+  border-right: 1px solid white;
+  margin: 1rem;
+}
+.other-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.svg,
+.text {
+  display: inline-block;
+}
+footer {
+  position: relative;
+  left: 17rem;
+  top: 6rem;
+}
+.price {
+  font-size: 35px;
+}
+input {
+  margin-right: 10px;
+}
+.first-check,
+.second-check {
+  margin: 10px 0;
+  font-size: smaller;
+  font-weight: 100;
+}
+.add-to-collection-btn {
+  padding: 12px 25px;
+  border: none;
+  background-color: wheat;
+  font-size: 15px;
+  font-weight: 100;
+  color: black;
+  border-radius: 10px;
+  margin: 15px 0;
+  cursor: pointer;
+}
