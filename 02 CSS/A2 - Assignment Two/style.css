@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.page {
+  height: 100%;
+  width: 75%;
+  border: 2px solid black;
+  margin: 0 12%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 40px ;
+}
+.left-asterisk {
+  background-color: transparent;
+}
+.center-nav {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: -5px;
+  word-spacing: 2px;
+  color: #510508;
+}
+#second-center-nav {
+  line-height: 0px;
+}
+#sidepose-women {
+  border-radius: 90px;
+  transform: rotateY("90deg");
+}
+.right-corner-text {
+  text-transform: capitalize;
+  font-size: 15px;
+  text-align: right;
+  color: #3c393a;
+  font-weight: 400;
+}
+.middle-text {
+  margin-left: 40%;
+}
+.first-para-middle {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: -5px;
+  word-spacing: 2px;
+  color: #510508;
+}
+.second-para-middle {
+  font-size: 10px;
+  margin-top: 10px;
+}
+#first-grey-line {
+  color: grey;
+  line-height: 0;
+}
+#second-line-middle {
+  line-height: 40px;
+}
+.lower-middle {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 50px;
+  margin-top: 20px;
+}
+.link {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-decoration: underline;
+  position: relative;
+  top: 120px;
+  right: 100px;
+}
+.images {
+  display: flex;
+  gap: 12px;
+}
+#first,
+#second,
+#third {
+  border-radius: 20px;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+
+}
+.large-text-footer {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: -5px;
+  word-spacing: 2px;
+  color: #510508;
+}
+#first-line-footer{
+  margin-top: 10px;
+  line-height: 1;
+}
+#second-line-footer{
+  line-height: 1;
+}
+.para-text-footer {
+  text-align: center;
+  font-size: 10px;
+}
