@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "helvetica neue";
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+main {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  height: 5rem;
+  background-color: palegoldenrod;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-size: 2rem;
+}
+nav svg {
+  display: none;
+  height: 2rem;
+}
+@media (max-width: 900px) {
+  nav svg {
+    display: inline-block;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+    rotate: 360deg;
+  }
+}
+
+#doraemon {
+  position: absolute;
+  animation-name: doraemon;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+#doraemon:hover {
+  animation-play-state: paused;
+}
+@keyframes doraemon {
+  0% {
+    top: 0;
+    left: 0;
+    rotate: 0;
+  }
+  25% {
+    top: 0;
+    left: 75%;
+    rotate: 90deg;
+  }
+  50% {
+    top: 75%;
+    left: 75%;
+    rotate: 180deg;
+  }
+  75% {
+    top: 75%;
+    left: 0;
+    rotate: 270deg;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    rotate: 360deg;
+  }
+}
+
+.two {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+.name {
+  border: 1px solid black;
+  white-space: nowrap;
+  padding: 1rem;
+  animation-name: continuous-move-left;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes continuous-move-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+section.three {
+  display: flex;
+  padding: 1rem;
+  overflow: hidden;
+}
+.companies {
+  display: flex;
+  justify-content: space-evenly;
+  animation-name: continuous-move-left;
+  animation-timing-function: linear;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+h4 {
+  font-size: 2rem;
+  padding: 2rem;
+}
