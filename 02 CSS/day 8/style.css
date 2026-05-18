@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "helvetica neue";
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  color: red;
+  font-size: 4rem;
+}
+
+h1::before {
+  content: "Hmmm....";
+  font-size: 1rem;
+  color: green;
+}
+
+h1::after {
+  content: " Everyone";
+  color: blue;
+  font-size: 3rem;
+}
+
+nav {
+  height: 5rem;
+  width: 100%;
+  background-color: skyblue;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h2 {
+  font-size: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+h2::after {
+  content: "";
+  height: 5px;
+  background-color: red;
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all ease 0.3s;
+}
+h2:hover::after {
+  width: 100%;
+}
+.download-btn {
+  background-color: transparent;
+  padding: 2rem 3rem;
+  margin: 3rem;
+  color: darkblue;
+  border: 2px solid darkblue;
+  font-size: 2rem;
+  border-radius: 10rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: all ease 0.4s;
+  overflow: hidden;
+}
+.download-btn::after {
+  content: "";
+  background-color: darkblue;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+  transition: all ease 0.3s;
+}
+.download-btn:hover {
+  color: white;
+}
+.download-btn:hover::after {
+  transform: translate(-50%, 50%) scale(7);
+}
+
+/* .download-btn::after {
+  content: "";
+  background-color: skyblue;
+  height: 100%;
+  width: 00%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10rem;
+  z-index: -1;
+  transition: all ease 0.3s;
+}
+.download-btn:hover::after{
+    width: 100%;
+} */
