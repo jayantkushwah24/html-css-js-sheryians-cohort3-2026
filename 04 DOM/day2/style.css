@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "helvetica neue";
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.circle {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+}
+.bulb-btn {
+  padding: 1rem;
+  background-color: skyblue ;
+  color: black;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+.bulb-btn:hover {
+  cursor: pointer;
+}
