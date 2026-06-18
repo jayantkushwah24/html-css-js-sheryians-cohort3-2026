@@ -1,0 +1,157 @@
+/* ==========================================
+   GLOBAL CONFIGURATION & CONFIG RESET
+   ========================================== */
+:root {
+  --bg-dark: #090d16; /* Deep space background */
+  --bg-card: #131a26; /* Glass container background */
+  --text-main: #f8fafc; /* Off-white readable text */
+  --text-dim: #64748b; /* Muted gray for labels */
+  --color-timer: #06b6d4; /* Cyber cyan */
+  --color-score: #eab308; /* Neon gold */
+  --color-danger: #f43f5e; /* Warning pink/red */
+  --radius: 16px;
+  --font-game: system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-game);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+main {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 90vw;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Anchors absolute elements like #game-over */
+}
+
+/* ==========================================
+   HEADERS (TIMER & SCORE)
+   ========================================== */
+h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1:nth-of-type(2) {
+  margin-bottom: 1.5rem; /* Space before game board */
+}
+
+#timer {
+  color: var(--color-timer);
+  font-family: monospace;
+  font-size: 1.75rem;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+#points {
+  color: var(--color-score);
+  font-family: monospace;
+  font-size: 1.75rem;
+  text-shadow: 0 0 10px rgba(234, 179, 8, 0.3);
+}
+
+/* ==========================================
+   GAME INTERFACE AREA
+   ========================================== */
+.container {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Enforces a clean square map */
+  background-color: #05070b; /* Darker playing surface */
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: calc(var(--radius) - 4px);
+  position: relative; /* Essential anchor for your dynamic absolute box position */
+  margin-bottom: 1.5rem;
+  overflow: hidden; /* Restricts parts of the box running past the grid edge */
+}
+
+.box {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+
+  /* Centers target element directly over coordinates to stop it from running past boundaries */
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+.box:active {
+  transform: translate(-50%, -50%) scale(0.85); /* Squash animation when hit */
+}
+
+/* ==========================================
+   GAME ACTION INTERACTIVE BUTTONS
+   ========================================== */
+#start-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: calc(var(--radius) - 6px);
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+#start-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+#start-btn:active {
+  transform: translateY(1px);
+}
+
+#game-over {
+  display: none; /* Controlled purely via JS engine toggle */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 13, 22, 0.95);
+  border-radius: var(--radius);
+  z-index: 10;
+  color: var(--color-danger);
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  line-height: 480px; /* Perfectly aligns splash copy along modern card heights */
+  text-shadow: 0 0 15px rgba(244, 63, 94, 0.4);
+}
