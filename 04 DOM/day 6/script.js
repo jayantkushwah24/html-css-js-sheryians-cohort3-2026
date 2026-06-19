@@ -8,6 +8,7 @@ let productList = [];
 let updateIndex = null;
 
 function productListRender() {
+  productList = JSON.parse(localStorage.getItem("products")) || [];
   productsDiv.innerHTML = "";
   productList.forEach((item, index) => {
     productsDiv.innerHTML += `<div class="product-card">
@@ -34,6 +35,7 @@ productListRender();
 
 function deleteProduct(index) {
   productList.splice(index, 1);
+  localStorage.setItem("products", JSON.stringify(productList));
   productListRender();
 }
 
@@ -76,8 +78,10 @@ form.addEventListener("submit", (event) => {
   if (updateIndex != null) {
     productList[updateIndex] = obj;
     updateIndex = null;
+    localStorage.setItem("products", JSON.stringify(productList));
   } else {
     productList.push(obj);
+    localStorage.setItem("products", JSON.stringify(productList));
   }
 
   productListRender();
